@@ -5,11 +5,17 @@ import { useState } from "react";
 function App() {
   const [selectedPlant, setSelectedPlant] = useState(plants[0]);
 
-  const changeSelectedPlant = (id) => {
-    // TODO: Remove the selected plant with this id from the list
-    // TODO:  set the new selected plant to the plant with matching id
-    
-    alert(id);
+  const changeSelectedPlant = (id) => {    
+    // TODO: Use the id argument to set the new selectedPlant
+    const foundPlant = plants.find((plant) => {
+      if (plant.id === id) {
+        return true;
+      } else {
+        return false;
+      }
+    })
+
+    setSelectedPlant(foundPlant);
   }
 
   // Create a new array without the selected plant
