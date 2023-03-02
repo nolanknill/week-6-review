@@ -1,10 +1,11 @@
 import PlantItem from "../PlantItem/PlantItem";
+import "./PlantList.scss";
 
 const PlantList = ({ changeSelectedPlant, plants }) => {
     return (
-        <nav>
-            <ul>
-                <li>Home</li>
+        <nav className="plant-list">
+            <ul className="plant-list__list">
+                <li className="plant-list__item">Home</li>
                 {plants.map((plant) => {
                     return <PlantItem
                         key={plant.id}

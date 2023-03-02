@@ -2,7 +2,11 @@
 
 const PlantItem = ({ id, name, changeSelectedPlant }) => {
     return (
-        <li onClick={() => { changeSelectedPlant(id) }}>{name}</li>
+        <li 
+            className="plant-list__item"
+            onClick={() => { changeSelectedPlant(id) }}>
+                {name}
+        </li>
     );
 
 }

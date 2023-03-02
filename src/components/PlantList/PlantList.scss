@@ -1,0 +1,22 @@
+.plant-list {
+    background-color: rgb(214, 214, 214);
+    padding: 1rem 2rem;
+    margin-right: 2rem;
+    height: 100vh;
+    box-sizing: border-box;
+    color: #a52a2b;
+
+    &__list {
+        padding: 0;
+    }
+
+    &__item {
+        list-style: none;
+        padding: 0;
+        margin-bottom: 1.5rem;
+        font-size: 1.25rem;
+        text-decoration: underline;
+        font-weight: bold;
+        cursor: pointer;
+    }
+}

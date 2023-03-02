@@ -2,6 +2,7 @@ import plants from "./data/plants.json";
 import PlantList from "./components/PlantList/PlantList";
 import SelectedPlant from "./components/SelectedPlant/SelectedPlant";
 import { useState } from "react";
+import "./App.scss";
 
 function App() {
   const [selectedPlant, setSelectedPlant] = useState(plants[0]);
@@ -24,7 +25,7 @@ function App() {
   })
 
   return (
-    <>
+    <div className="app">
       <PlantList 
         changeSelectedPlant={changeSelectedPlant}
         plants={filteredPlants}
@@ -35,7 +36,7 @@ function App() {
         imageUrl={selectedPlant.image_url}
         waterFrequency={selectedPlant.water_frequency}
       />
-    </>
+    </div>
   );
 }
 
