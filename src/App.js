@@ -1,24 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+import plants from "./data/plants.json";
+import PlantList from "./components/PlantList/PlantList";
 
 function App() {
+  const changeSelectedPlant = (id) => {
+    alert(id);
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <PlantList 
+      changeSelectedPlant={changeSelectedPlant}
+      plants={plants}
+    />
   );
 }
 

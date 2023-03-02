@@ -10,6 +10,7 @@ App
 
     PlantList
         props:
+            - plants: array
             - changeSelectedPlant()
         
 
