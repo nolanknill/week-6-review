@@ -3,7 +3,7 @@
       "id": 1,
       "name": "Spiky",
       "type": "Cactus",
-      "water_frequency": 30,
+      "water_frequency": 60,
       "image_url": "https://images.pexels.com/photos/1903965/pexels-photo-1903965.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
     },
     {

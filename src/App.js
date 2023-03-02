@@ -1,12 +1,12 @@
 import plants from "./data/plants.json";
 import PlantList from "./components/PlantList/PlantList";
+import SelectedPlant from "./components/SelectedPlant/SelectedPlant";
 import { useState } from "react";
 
 function App() {
   const [selectedPlant, setSelectedPlant] = useState(plants[0]);
 
   const changeSelectedPlant = (id) => {    
-    // TODO: Use the id argument to set the new selectedPlant
     const foundPlant = plants.find((plant) => {
       if (plant.id === id) {
         return true;
@@ -24,10 +24,18 @@ function App() {
   })
 
   return (
-    <PlantList 
-      changeSelectedPlant={changeSelectedPlant}
-      plants={filteredPlants}
-    />
+    <>
+      <PlantList 
+        changeSelectedPlant={changeSelectedPlant}
+        plants={filteredPlants}
+      />
+      <SelectedPlant 
+        name={selectedPlant.name}
+        type={selectedPlant.type}
+        imageUrl={selectedPlant.image_url}
+        waterFrequency={selectedPlant.water_frequency}
+      />
+    </>
   );
 }
 
