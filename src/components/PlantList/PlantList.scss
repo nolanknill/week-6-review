@@ -4,7 +4,6 @@
     margin-right: 2rem;
     height: 100vh;
     box-sizing: border-box;
-    color: #a52a2b;
 
     &__list {
         padding: 0;
@@ -13,10 +12,13 @@
     &__item {
         list-style: none;
         padding: 0;
-        margin-bottom: 1.5rem;
+        margin-bottom: 1.5rem;  
+    }
+
+    &__link {
         font-size: 1.25rem;
         text-decoration: underline;
         font-weight: bold;
-        cursor: pointer;
+        color: #a52a2b;
     }
 }
